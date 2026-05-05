@@ -1,0 +1,18 @@
+<h2>Les modèles de vaisseaux</h2>
+<p>Dernière mise à jour: {{lastUpdate | async}}</p>
+
+<ul class="list-group">
+
+    @for (item of vaisseaux; track item.name; let i = $index) {
+
+    <app-vaisseau-models
+    [vaisseauNom]=item.name
+    [vaisseauStatus]=item.status
+    [indexDesVaisseaux]="i"
+    [id]="item.id">
+    </app-vaisseau-models> }
+
+</ul>
+
+<button class="btn btn-success" [disabled]="!isAuth" (click)="onAllumer()">Tous disponible</button>
+<button class="btn btn-danger" [disabled]=" !isAuth" (click)="onFermer()">Tous non disponible</button>

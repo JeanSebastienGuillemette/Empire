@@ -1,0 +1,32 @@
+<ul class="list-group">
+    <li [ngClass]="{   'list-group-item': true,
+
+                    'list-group-item-success': vaisseauStatus === 'Disponible',
+
+                    'list-group-item-danger': vaisseauStatus === 'Non disponible'}">
+        @if (vaisseauStatus === 'Non disponible') {
+
+        <div style="width:20px;height:20px;background-color:red;"></div>
+
+        } @else if (vaisseauStatus === 'Disponible') {
+
+        <div style="width:20px;height:20px;background-color:green;"></div>
+
+        } @else {
+
+        <!-- Rien du tout -->
+
+        }
+        <h4 [ngStyle]="{color:getColor()}">Modèle de vaisseau: {{ vaisseauNom }} --Status: {{getStatus()}}</h4>
+        <a [routerLink]=[id]>Détails</a>
+        <input type="text" class="form-control" [(ngModel)]="vaisseauNom">
+        <input type="text" class="form-control" [(ngModel)]="vaisseauStatus">
+
+        @if (vaisseauStatus === 'Non disponible') {
+        <button class="btn btn-sm btn-success" (click)="onSwitchOn()">Disponible</button>
+        }
+        @if (vaisseauStatus === 'Disponible') {
+        <button class="btn btn-sm btn-danger" (click)="onSwitchOff()">Non disponible</button>
+        }
+    </li>
+</ul>

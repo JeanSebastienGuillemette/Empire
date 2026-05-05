@@ -1,0 +1,7 @@
+<h2>Authentification</h2>
+    @if (!authStatus) {
+       <button class="btn btn-success" (click)="onSignIn()">Se connecter</button> 
+    }
+    @if (authStatus) {
+       <button class="btn btn-danger" (click)="onSignOut()">Se déconnecter</button>
+    }
