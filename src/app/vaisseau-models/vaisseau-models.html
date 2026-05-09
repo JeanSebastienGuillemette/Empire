@@ -27,6 +27,9 @@
         }
         @if (vaisseauStatus === 'Disponible') {
         <button class="btn btn-sm btn-danger" (click)="onSwitchOff()">Non disponible</button>
+        <button class="btn btn-sm" [ngClass]="ajoute ? 'btn-success' : 'btn-primary'" [disabled]="ajoute" (click)="onAjouterAuPanier()">
+          {{ ajoute ? 'Ajouté ✓' : 'Ajouter au panier' }}
+        </button>
         }
     </li>
 </ul>

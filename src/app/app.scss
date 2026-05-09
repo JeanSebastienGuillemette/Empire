@@ -1,0 +1,49 @@
+.app-header {
+  text-align: center;
+  padding: 24px 0 16px;
+
+  h1 {
+    color: #cc0000;
+    font-size: 1.6rem;
+    text-shadow: 0 0 12px rgba(204, 0, 0, 0.4);
+    margin: 0;
+  }
+}
+
+.navbar {
+  background-color: #111111 !important;
+  border-bottom: 2px solid #cc0000;
+  padding: 10px 20px;
+
+  .nav-link {
+    color: #999999 !important;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    padding: 8px 18px !important;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #ffffff !important;
+    }
+
+    &.active {
+      color: #cc0000 !important;
+    }
+  }
+}
+
+.container-fluid {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.side-banner {
+  width: 220px;
+  flex-shrink: 0;
+  min-height: calc(100vh - 120px);
+  background-image: url('/img/EmpireLogo.jpg');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center top;
+}

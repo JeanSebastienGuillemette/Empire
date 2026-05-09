@@ -1,7 +1,14 @@
 <h2>Authentification</h2>
-    @if (!authStatus) {
-       <button class="btn btn-success" (click)="onSignIn()">Se connecter</button> 
-    }
-    @if (authStatus) {
-       <button class="btn btn-danger" (click)="onSignOut()">Se déconnecter</button>
-    }
+
+@if (isLoading) {
+  <img src="http://localhost/images/attente.gif" alt="Chargement en cours...">
+  <p>Vérification en cours...</p>
+}
+
+@if (!isLoading && !authStatus) {
+  <button class="btn btn-success" (click)="onSignIn()">Se connecter</button>
+}
+
+@if (!isLoading && authStatus) {
+  <button class="btn btn-danger" (click)="onSignOut()">Se déconnecter</button>
+}

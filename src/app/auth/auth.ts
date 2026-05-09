@@ -11,15 +11,17 @@ import { Router } from '@angular/router';
   styleUrl: './auth.scss',
 })
 export class Auth {
-  authStatus: boolean = true;
+  authStatus: boolean = false;
+  isLoading = false;
   constructor(private service: ServiceAuth, private router:Router) { }
   ngOnInit() {
     this.authStatus = this.service.isAuth;
   }
   onSignIn() {
+    this.isLoading = true;
     this.service.signIn().then(
       () => {
-        console.log('Sign in successful!');
+        this.isLoading = false;
         this.authStatus = this.service.isAuth;
         this.router.navigate(['vaisseaux']);
       }

@@ -12,7 +12,7 @@ export class ServiceAuth {
           () => {
             this.isAuth = true;
             resolve(true);
-          }, 2000
+          }, 3000
         );
       }
     );

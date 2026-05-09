@@ -1,9 +1,13 @@
-<div style="text-align:center">
-  <h1>Bienvenue aux {{ title }}!</h1>
+<div class="app-header">
+  @if (!editMode) {
+    <h1>Bienvenue au <span [innerHTML]= "title"></span></h1>
+  } @else {
+    <editor [(ngModel)]="title" [init]= "editorConfig"></editor>
+  }
 </div>
 <hr>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -16,8 +20,17 @@
       <li class="nav-item">
         <a class="nav-link" routerLinkActive="active" routerLink="auth">Authentification</a>
       </li>
+       <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="edit">Nouveau vaisseau</a>
+          </li>
       <li class="nav-item">
-        <a class="nav-link disabled" routerLinkActive="active" href="#">Disabled</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="panier">Panier</a>
+      </li>
+      <li class="nav-item ms-3">
+        <button class="btn btn-sm" [class.btn-outline-warning]="!editMode" [class.btn-success]="editMode"
+          (click)= "editMode = !editMode">
+          {{ editMode ? 'Terminer' : 'Modifier le site' }}
+        </button>
       </li>
     </ul>
   </div>
@@ -25,11 +38,12 @@
 
 <hr>
 
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col">
       <router-outlet></router-outlet>
       <!--<app-vaisseau-view></app-vaisseau-view>-->
     </div>
+    <div class="side-banner"></div>
   </div>
 </div>

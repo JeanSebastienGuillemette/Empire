@@ -1,1 +1,3 @@
-node_modules/\n.angular/\ndist/
+node_modules/
+.angular/
+dist/

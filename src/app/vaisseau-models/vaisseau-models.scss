@@ -1,0 +1,48 @@
+.list-group {
+  margin-bottom: 8px;
+}
+
+li {
+  padding: 14px 18px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px !important;
+
+  h4 {
+    font-size: 0.95rem;
+    margin: 0;
+    flex: 1 1 100%;
+    letter-spacing: 1px;
+  }
+
+  a[routerlink] {
+    color: #888;
+    font-size: 0.8rem;
+    text-decoration: none;
+
+    &:hover {
+      color: #cc0000;
+    }
+  }
+
+  input.form-control {
+    max-width: 220px;
+    font-size: 0.82rem;
+    padding: 4px 8px;
+    height: auto;
+  }
+
+  button {
+    font-size: 0.78rem;
+    letter-spacing: 0.5px;
+    padding: 4px 12px;
+  }
+}
+
+div[style*="background-color:red"],
+div[style*="background-color:green"] {
+  border-radius: 50%;
+  flex-shrink: 0;
+}

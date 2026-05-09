@@ -1,0 +1,32 @@
+:host {
+  display: block;
+  max-width: 500px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+h2 {
+  color: #cc0000;
+  margin-bottom: 16px;
+}
+
+p {
+  color: #aaaaaa;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+a {
+  color: #888;
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #333;
+  padding-bottom: 2px;
+
+  &:hover {
+    color: #cc0000;
+    border-color: #cc0000;
+  }
+}
