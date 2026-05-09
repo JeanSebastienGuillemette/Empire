@@ -5,8 +5,8 @@
 }
 
 body {
-  background-color: #0d0d0d;
-  color: #e0e0e0;
+  background-color: #111;
+  color: #ddd;
   font-family: Arial, sans-serif;
   min-height: 100vh;
 }
@@ -21,11 +21,10 @@ hr {
   margin: 0;
 }
 
-// Bootstrap overrides — list-group
 .list-group-item {
-  background-color: #1a1a1a !important;
+  background-color: #1c1c1c !important;
   border-color: #2a2a2a !important;
-  color: #e0e0e0 !important;
+  color: #ddd !important;
 }
 
 .list-group-item-success {
@@ -38,15 +37,14 @@ hr {
   border-left: 3px solid #cc0000 !important;
 }
 
-// Bootstrap overrides — forms
 .form-control {
   background-color: #1a1a1a !important;
-  border-color: #3a3a3a !important;
-  color: #e0e0e0 !important;
+  border-color: #333 !important;
+  color: #ddd !important;
 
   &:focus {
     border-color: #cc0000 !important;
-    box-shadow: 0 0 0 0.2rem rgba(204, 0, 0, 0.25) !important;
+    box-shadow: 0 0 0 3px rgba(200, 0, 0, 0.2) !important;
   }
 }
 
@@ -54,29 +52,28 @@ select.form-control option {
   background-color: #1a1a1a;
 }
 
-// Bootstrap overrides — boutons
 .btn-primary {
   background-color: #cc0000 !important;
-  border-color: #aa0000 !important;
+  border-color: #a00 !important;
 
   &:hover:not(:disabled) {
     background-color: #aa0000 !important;
-    border-color: #880000 !important;
+    border-color: #800 !important;
   }
 }
 
 .btn-success {
   background-color: #1a5c1a !important;
-  border-color: #145214 !important;
+  border-color: #144 !important;
 
   &:hover:not(:disabled) {
-    background-color: #145214 !important;
+    background-color: #155215 !important;
   }
 }
 
 .btn-danger {
   background-color: #7a0000 !important;
-  border-color: #5a0000 !important;
+  border-color: #560000 !important;
 
   &:hover:not(:disabled) {
     background-color: #5a0000 !important;
@@ -84,6 +81,6 @@ select.form-control option {
 }
 
 .btn:disabled {
-  opacity: 0.35;
+  opacity: 0.4;
   cursor: not-allowed;
 }
