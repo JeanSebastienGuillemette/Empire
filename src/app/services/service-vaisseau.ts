@@ -10,8 +10,8 @@ export class ServiceVaisseau {
 
   vaisseauxSubject = new Subject<any[]>();
 
-  public urlPhp:string = "http://localhost/backend/inserer_angular66.php";
-  public urlPhpGet: string = "http://localhost/backend/afficher_angular.php";
+  public urlPhp:string = "http://localhost/Empire/backend/inserer_angular66.php";
+  public urlPhpGet: string = "http://localhost/Empire/backend/afficher_angular.php";
 
   vaisseaux = [
     {
