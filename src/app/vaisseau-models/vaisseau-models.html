@@ -27,8 +27,11 @@
         }
         @if (vaisseauStatus === 'Disponible') {
         <button class="btn btn-sm btn-danger" (click)="onSwitchOff()">Non disponible</button>
+        <form (ngSubmit)="OnSubmit()">
+          <button class="btn btn-sm btn-danger" type="submit">Supprimer le vaisseau</button>
+        </form>
         <button class="btn btn-sm" [ngClass]="ajoute ? 'btn-success' : 'btn-primary'" [disabled]="ajoute" (click)="onAjouterAuPanier()">
-          {{ ajoute ? 'Ajouté ✓' : 'Ajouter au panier' }}
+          {{ ajoute ? 'Ajouté' : 'Ajouter au panier' }}
         </button>
         }
     </li>

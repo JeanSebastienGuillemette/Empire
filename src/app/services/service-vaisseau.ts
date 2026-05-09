@@ -12,6 +12,7 @@ export class ServiceVaisseau {
 
   public urlPhp:string = "http://localhost/Empire/backend/inserer_angular66.php";
   public urlPhpGet: string = "http://localhost/Empire/backend/afficher_angular.php";
+  public urlPhpDelete: string = "http://localhost/Empire/backend/destruction_angular.php";
 
   vaisseaux = [
     {
@@ -92,6 +93,15 @@ export class ServiceVaisseau {
   saveVaisseauxToServer(){
     const body = this.vaisseaux;
     return this.http.put(this.urlPhp, body, { responseType: 'text' });
+  }
+
+  detruireOne(index:number){
+    let endPoints = "?id=" + index;
+    this.http.delete(this.urlPhpDelete + endPoints).subscribe({
+      next: (data) => console.log('Supression réussi!', data),
+      error: (err) => console.error('Message d\'erreur: ', err),
+      complete: () => console.log('Complété!')
+    });
   }
 
 }

@@ -9,7 +9,7 @@ header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 // identifiants de base de données 
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
-define('DB_PASS', 'empire123');
+define('DB_PASS', 'Empire123');
 define('DB_NAME', 'empire_backend');
 
 // Connectez-vous à la base de données 
