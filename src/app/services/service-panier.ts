@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class ServicePanier {
-  private urlAjouter = 'http://localhost/Empire/backend/ajouter_panier.php';
+  private urlAjouter = 'http://php.dinf.ca/projet/h2026/2353935/backend/ajouter_panier.php';
 
   constructor(private http: HttpClient) {}
 

@@ -8,9 +8,9 @@ header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 
 // identifiants de base de données 
 define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', 'Empire123');
-define('DB_NAME', 'empire_backend');
+define('DB_USER', '2353935');
+define('DB_PASS', 'bbyoda$1138');
+define('DB_NAME', '2353935');
 
 // Connectez-vous à la base de données 
 function connect()

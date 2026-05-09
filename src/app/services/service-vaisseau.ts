@@ -10,9 +10,9 @@ export class ServiceVaisseau {
 
   vaisseauxSubject = new Subject<any[]>();
 
-  public urlPhp:string = "http://localhost/Empire/backend/inserer_angular66.php";
-  public urlPhpGet: string = "http://localhost/Empire/backend/afficher_angular.php";
-  public urlPhpDelete: string = "http://localhost/Empire/backend/destruction_angular.php";
+  public urlPhp:string = "http://php.dinf.ca/projet/h2026/2353935/backend/inserer_angular66.php";
+  public urlPhpGet: string = "http://php.dinf.ca/projet/h2026/2353935/backend/afficher_angular.php";
+  public urlPhpDelete: string = "http://php.dinf.ca/projet/h2026/2353935/backend/destruction_angular.php";
 
   vaisseaux = [
     {
